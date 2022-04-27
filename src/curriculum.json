@@ -80,10 +80,11 @@
             "logo":"/icons/other_tools_logo.svg",
             "style":"list",
             "elements":[
+                {"title":"React"},
                 {"title":"Android Studio"},
                 {"title":"Git hub"},
                 {"title":"Visual Studio"},
-                {"title":"docker"},
+                {"title":"Docker"},
                 {"title":"Mathematica"},
                 {"title":"Tealeaf"},
                 {"title":"Fusion 360"},
@@ -99,7 +100,7 @@
         "title": "Contact Info",
         "style":"contact-list",
         "elements":[
-            {"title":"jreyesg.fi @gmail.com","logo":"/icons/phone.svg"},
+            {"title":"jreyesg.fi @gmail.com","logo":"/icons/phone.svg","style":"mail"},
             {"title":"633190572","logo":"/icons/mail.svg"},
             {"title":"Soria, Spain","logo":"/icons/position.svg"}
         ]

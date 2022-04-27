@@ -28,7 +28,7 @@
   height: 29.7cm;
   width: 21.0cm;
 
-  padding:1cm;
+  padding:0.5cm;
 
   border:1pt solid #282c34;
 }
@@ -36,7 +36,8 @@
 
 .container-1{
   position: relative;
-  left: -1cm;
+  left: 0cm;
+  margin:auto;
 
   height:100%;
 
@@ -61,7 +62,7 @@ h1{
 
   width: fit-content;
   max-width: 60%;
-  margin:0.6cm auto 0.2cm auto;
+  margin:0 auto;
   padding-bottom:0.2cm;
   border-bottom: 1pt solid #203051;
 }
@@ -103,13 +104,8 @@ p{
 
 /*defined styles*/
 .style-list{
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.style-list *{
-  flex:1 0 30%;
+  display:grid;
+  grid-template-columns: repeat(3, 30%);
 }
 
 /* .flex-container{
@@ -138,7 +134,6 @@ p{
 
 .title-container{
   height: min-height;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -172,19 +167,27 @@ p{
 /*main photo style*/
 .photo-container .logo{
 
-  height:4cm;
+  height:3cm;
   width: auto;
 
   margin:0;
 }
 
 /* contact info style*/
-.style-contact-list *{
+.style-contact-list .title-container{
   margin: 0.1cm auto;
   width: 90%;
-  justify-content: space-between;
+
+  justify-content: right;
+
+  display:grid;
+  grid-template-columns: 28% 70%;
 }
 
+.style-contact-list .title-container *{
+  right:0;
+  margin:0;
+}
 
 
 
@@ -207,8 +210,6 @@ p{
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);

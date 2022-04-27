@@ -3,7 +3,7 @@ import './App.css';
 import curriculum from './curriculum.json';
 import { useEffect, useState } from 'react';
 import downloadPdf from 'dom-to-pdf';
-
+import domtoimage from "dom-to-image-more";
 
 
 function App() {
@@ -14,8 +14,10 @@ function App() {
 
   const keyGenerator=()=>Math.floor(Math.random() * (10**17));
 
-  const generateTitle=(level,text)=>{
-    text = text.toUpperCase();
+  const generateTitle=(level,text,style='')=>{
+    if (style!=='mail'){
+      text = text.toUpperCase();
+    }
     var title = null;
     const key = keyGenerator();
     if (level==1){
@@ -108,7 +110,7 @@ function App() {
               {generateLogo(level,dict['logo'])}
             </div>
           }
-          {generateTitle(level,dict['title'])}
+          {generateTitle(level,dict['title'],dict['style'])}
         </div>
         }
         {dict['photo'] &&
@@ -176,19 +178,29 @@ function App() {
 
   function printToPdf(){ 
     try{
-      console.log('hi')
-      
       const element = document.getElementById('cv');
       var options = {
         filename: 'cv.pdf'
       };
-      downloadPdf(element, options, function(pdf) {
-        console.log('done');
+      // downloadPdf(element, options, function(pdf) {
+      //   console.log('done');
+      // });
+
+      options = {
+        quality:1.0
+      }
+      domtoimage.toSvg(element).then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        document.body.appendChild(img);
+      }).catch(function (error) {
+        console.error('oops, something went wrong!', error);
       });
     }
     catch(e){
       console.log(e)
     }
+    
 
   }
 
@@ -197,7 +209,7 @@ function App() {
   return (
     <div className="App">
         <div
-        style={{background:'#999',position:'absolute', right:'15cm', width: '5cm'}}
+        style={{background:'#999',position:'absolute', left:'1cm', width: '5cm'}}
           onClick={()=>{
             fetch(curriculum).then(()=>{
               setDocumentCV(curriculum)}
@@ -207,7 +219,7 @@ function App() {
             Clicka
         </div>
         <div
-        style={{background:'#999',position:'absolute', right:'9cm', width: '5cm'}}
+        style={{background:'#999',position:'absolute', left:'4cm', width: '5cm'}}
           onClick={()=>{
             printToPdf();
           }}>
