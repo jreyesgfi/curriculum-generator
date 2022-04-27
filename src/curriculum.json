@@ -1,0 +1,107 @@
+{
+    "title":"Jorge Reyes Guerrero",
+    "about-me":{
+        "title":"About me",
+        "body":"Self taught, curious and witty. I am looking to apply my programming knowledge to the real demands of a company while I start out in Big Data."
+    },
+    "trajectory":{
+        "title": "trajectory",
+        "education":{
+            "title": "education",
+            "logo":"/icons/education_logo.svg",
+            "style":"time-line",
+            "elements":[
+                {
+                    "title": "Master Online in Big Data",
+                    "body": "International University of La Rioja (UNIR)",
+                    "date": "2021-2022"
+                },
+                {
+                    "title": "Degree in Physics",
+                    "body": "University of Valladolid (UVa)",
+                    "date": "2016-2021" 
+                },
+                {
+                    "title": "'El Pilar' High School",
+                    "body": "High School in research and excellence(BIE)",
+                    "date": "2016" 
+                }
+            ]
+        },
+        "work experience":{
+            "title": "work experience",
+            "logo":"/icons/work_experience_logo.svg",
+            "style":"time-line",
+            "elements":[
+                {
+                    "title": "Internship Company in Luce IT",
+                    "body": "Internship company in the Luce IT enterprise as analyst and developer in js environment",
+                    "date": "2022-03 to 2022-06"
+                },
+                {
+                    "title": "Internship Company in GOA",
+                    "body": "Internship company in the Group o Atmospheric Optic as developer in Python environment",
+                    "date": "2021"
+                },
+                {
+                    "title": "Private Tutor",
+                    "body": "Tutor of algebra at university level",
+                    "date": "2020" 
+                },
+                {
+                    "title": "Academy teacher",
+                    "body": "Academy teacher at high school level in math, physics and chemistry",
+                    "date": "2019" 
+                }
+            ]
+        }
+    },
+    "software competences":{
+        "title":"software competences",
+        "Programming Languages (and frameworks)":{
+            "title":"Programming Languages",
+            "logo":"/icons/software_competences_logo.svg",
+            "style":"list",
+            "elements":[
+                {"title":"Python","experience":8},
+                {"title":"HTML5 & CSS","experience":7},
+                {"title":"Javascript","experience":8},
+                {"title":"Spark","experience":6},
+                {"title":"Kotlin","experience":6},
+                {"title":"NodeJS","experience":5},
+                {"title":"C#","experience":5},
+                {"title":"R","experience":4},
+                {"title":"Java","experience":4},
+                {"title":"C","experience":4}
+            ]
+        },
+        "Other Tools & Data Bases":{
+            "title":"Other Tools & Data Bases",
+            "logo":"/icons/other_tools_logo.svg",
+            "style":"list",
+            "elements":[
+                {"title":"Android Studio"},
+                {"title":"Git hub"},
+                {"title":"Visual Studio"},
+                {"title":"docker"},
+                {"title":"Mathematica"},
+                {"title":"Tealeaf"},
+                {"title":"Fusion 360"},
+                {"title":"LaTex"},
+                {"title":"MongoDB"},
+                {"title":"Neo4j"},
+                {"title":"Cassandra"}
+            ]
+        }
+    },
+    "contact info":{
+        "photo": "/icons/main_photo.png",
+        "title": "Contact Info",
+        "style":"contact-list",
+        "elements":[
+            {"title":"jreyesg.fi @gmail.com","logo":"/icons/phone.svg"},
+            {"title":"633190572","logo":"/icons/mail.svg"},
+            {"title":"Soria, Spain","logo":"/icons/position.svg"}
+        ]
+    }
+}
