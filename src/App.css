@@ -19,11 +19,18 @@
   --white-mask-color:#ffffff9c;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*fonts*/
+@font-face { font-family: Main-Light; src: url('./fonts/static/OpenSans/OpenSans-Light.ttf') }
+@font-face { font-family: Main-Normal; src: url('./fonts/static/OpenSans/OpenSans-Medium.ttf') }
+@font-face { font-family: Main-SemiBold; src: url('./fonts/static/OpenSans/OpenSans-SemiBold.ttf') }
+@font-face { font-family: Main-Bold; src: url('./fonts/static/OpenSans/OpenSans-Bold.ttf') }
+@font-face { font-family: Main-Italic; src: url('./fonts/static/OpenSans/OpenSans-LightItalic.ttf') }
 
+@font-face { font-family: Second-Light; src: url('./fonts/static/OpenSans/OpenSans-Light.ttf') }
+@font-face { font-family: Second-Normal; src: url('./fonts/static/OpenSans/OpenSans-Medium.ttf') }
+@font-face { font-family: Second-SemiBold; src: url('./fonts/static/OpenSans/OpenSans-SemiBold.ttf') }
+@font-face { font-family: Second-Bold; src: url('./fonts/static/OpenSans/OpenSans-Bold.ttf') }
+@font-face { font-family: Second-Italic; src: url('./fonts/static/OpenSans/OpenSans-LightItalic.ttf') }
 .cv-container {
   height: 29.7cm;
   width: 21.0cm;
@@ -31,13 +38,35 @@
   padding:0.5cm;
 
   border:1pt solid #282c34;
+
+  font-family:Main-Light;
+}
+
+
+.title-container-3{
+  display:grid;
+  grid-template-columns: 12% [logo-init] 23% [logo-end] 1% [text-init] 1% [mail-init] 40% [text-end] 15% [mail-end];
+
+  align-items: center;
+}
+
+.title-box{
+  grid-column: text-init / text-end;
+}
+
+.logo-container{
+  grid-column: logo-init / logo-end;
+
+  right: left;
+
+  margin: 0cm auto;
 }
 
 
 .container-1{
   position: relative;
   left: 0cm;
-  margin:auto;
+  margin:0 auto;
 
   height:100%;
 
@@ -47,20 +76,15 @@
 
 
 .container-2 {
-  height:auto;
   /* border: 1pt solid #203051; */
-}
-
-.container-3 {
   -webkit-column-break-inside: avoid;
 }
+
 .container-4 {
   margin:0.3cm 0;
 }
 
 h1{
-
-  width: fit-content;
   max-width: 60%;
   margin:0 auto;
   padding-bottom:0.2cm;
@@ -68,7 +92,6 @@ h1{
 }
 
 h2{
-
   width: fit-content;
   max-width: 60%;
   margin:0.4cm auto 0.4cm auto;
@@ -77,11 +100,11 @@ h2{
 }
 
 h3{
-  margin:0.1cm 0.2cm 0.25cm 0.2cm;
+  margin:0.1cm auto;
 }
 
 h4{
-  margin:0.1cm auto;
+  margin:0cm auto;
 }
 
 .body{
@@ -95,9 +118,9 @@ h4{
 }
 
 p{
-  margin:auto;
+  margin:0.1cm auto;
   
-  width:75%;
+  width:70%;
 
   font-size: small;
 }
@@ -114,10 +137,12 @@ p{
 } */
 
 .logo {
+
   width: auto;
   height:1.5cm;
 
   margin-right:0.2cm;
+  margin-top:0.2cm;
 
   background-size: contain;
 }
@@ -130,12 +155,6 @@ p{
   max-width: 1.5cm;
 
   background-size:contain;
-}
-
-.title-container{
-  height: min-height;
-  justify-content: center;
-  align-items: center;
 }
 
 .experience-lines-container{
@@ -174,19 +193,15 @@ p{
 }
 
 /* contact info style*/
-.style-contact-list .title-container{
-  margin: 0.1cm auto;
-  width: 90%;
 
-  justify-content: right;
 
-  display:grid;
-  grid-template-columns: 28% 70%;
-}
+.style-contact-list .title-container .title-box{
+  margin:0.1cm;
 
-.style-contact-list .title-container *{
   right:0;
-  margin:0;
+  
+  grid-column: mail-init / mail-end;
+
 }
 
 

@@ -3,7 +3,7 @@ import './App.css';
 import curriculum from './curriculum.json';
 import { useEffect, useState } from 'react';
 import downloadPdf from 'dom-to-pdf';
-import domtoimage from "dom-to-image-more";
+import domtoimage from "dom-to-image-even-more";
 
 
 function App() {
@@ -35,7 +35,10 @@ function App() {
     else{
       title= (<h5 key={key}>{text}</h5>)
     }
-    return title;
+    return(
+    <div className='title-box'>
+      {title}
+    </div>)
   }
 
   const generateBody=(level,text)=>{
