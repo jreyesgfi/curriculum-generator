@@ -5,15 +5,15 @@
         "body":"Self taught, curious and witty. I am looking to apply my programming knowledge to the real demands of a company while I start out in Big Data."
     },
     "trajectory":{
-        "title": "trajectory",
+        "title": "trayectoria",
         "education":{
-            "title": "education",
+            "title": "educación",
             "logo":"/icons/education_logo.svg",
             "style":"time-line",
             "elements":[
                 {
-                    "title": "Master Online in Big Data",
-                    "body": "International University of La Rioja (UNIR)",
+                    "title": "Master Online en Big Data",
+                    "body": "Universidad Internacional de La Rioja (UNIR)",
                     "date": "2021-2022"
                 },
                 {

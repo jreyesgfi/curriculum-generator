@@ -4,6 +4,8 @@ import curriculum from './curriculum.json';
 import { useEffect, useState } from 'react';
 import downloadPdf from 'dom-to-pdf';
 import domtoimage from "dom-to-image-even-more";
+import { generateBody, generateDate, generateExperience, generateLogo, generatePlainText, generateTitle } from './ElementsGenerator';
+
 
 
 function App() {
@@ -12,93 +14,7 @@ function App() {
     (<div>Cargando</div>)
   );
 
-  const keyGenerator=()=>Math.floor(Math.random() * (10**17));
-
-  const generateTitle=(level,text,style='')=>{
-    if (style!=='mail'){
-      text = text.toUpperCase();
-    }
-    var title = null;
-    const key = keyGenerator();
-    if (level==1){
-      title= (<h1 key={key}>{text}</h1>)
-    }
-    else if (level==2){
-      title= (<h2 key={key}>{text}</h2>)
-    }
-    else if (level==3){
-      title= (<h3 key={key}>{text}</h3>)
-    }
-    else if (level==4){
-      title= (<h4 key={key}>{text}</h4>)
-    }
-    else{
-      title= (<h5 key={key}>{text}</h5>)
-    }
-    return(
-    <div className='title-box'>
-      {title}
-    </div>)
-  }
-
-  const generateBody=(level,text)=>{
-    return <p className='body'>{text}</p>
-  }
-
-  const generateDate=(level,text)=>{
-    return <p className='date'>{text}</p>
-  }
-
-  const generateItem= (level,text)=>{
-    return (
-      <div>
-        <p key={keyGenerator()}>{text}</p>
-      </div>
-    )
-  }
-  const generatePlainText= (level,text)=>{
-    if (text === '-'){
-      text = '';
-    }
-    if (level === 2){
-      text= (
-        <h2>{text}</h2>
-      );
-    }
-    else if (level === 3){
-      text= (
-        <h3>{text}</h3>
-      );
-    }
-
-    return(
-      text
-    )
-  }
-
-  const generateLogo= (level,url)=>{
-    if (url=='-'){
-      return(
-        <img className={`logo-${level} logo`} src={'/icons/software_competences_logo.svg'}>
-        </img>
-      )
-    }
-    return(
-      <img className={`logo-${level} logo`} src={url} alt="alternatetext">
-      </img>
-    )
-  }
-
-  const generateExperience= (level,experience)=>{
-    return(
-      <div className='experience-lines-container'>
-        <div className='background-line'>
-        </div>
-        <div className='experience-line' style={{width:`${experience*10}%`}}>
-        </div>
-      </div>
-    )
-  }
+  
 
   function CreateDoc(props){
     const level = props.level;
@@ -106,6 +22,10 @@ function App() {
     const className = '';
     return (
       <div className={`container-${level} level-container ${className} `}>
+        {dict['date'] &&
+            <div className='date-mark'>
+            </div>
+        }
         {dict['title'] &&
         <div className={`title-container title-container-${level} container`}>
           {dict['logo'] &&
